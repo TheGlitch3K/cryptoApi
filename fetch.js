@@ -14,9 +14,9 @@ window.addEventListener("load", function () {
           response[i].circulating_supply <= 500000000 &&
           response[i].current_price <= 10
         ) {
-          let myHtml = `<div class="astronaut">
+          let myHtml = `<div class="cryptos">
           <div class="bio">
-          <img class="avatar" src="${response[i].image}">
+          <img class="image" src="${response[i].image}">
              <h3>Ticker Symbol and Name: 
              \n${response[i].symbol} ${response[i].name}</h3> <div class="tradingview-widget-container">
          <div id="tradingview_44f68"></div>
@@ -30,34 +30,34 @@ window.addEventListener("load", function () {
           </div>
           
        </div>
-       <!-- TradingView Widget BEGIN -->
-       <div class="tradingview-widget-container">
-         <div id="tradingview_44f68"></div>
-         <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/${response[i].symbol}/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">${response[i].name} Chart</span></a> by TradingView</div>
-         <script>type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-         <script type="text/javascript">
-         new TradingView.widget(
-         {
-         "width": 980,
-         "height": 610,
-         "symbol": "BINANCE:${response[i].symbol}",
-         "interval": "D",
-         "timezone": "Etc/UTC",
-         "theme": "dark",
-         "style": "1",
-         "locale": "en",
-         "toolbar_bg": "#f1f3f6",
-         "enable_publishing": false,
-         "allow_symbol_change": true,
-         "studies": [
-           "hullMA@tv-basicstudies"
-         ],
-         "container_id": "tradingview_44f68"
-       }
-         );
-         </script>
-       </div>
-       <!-- TradingView Widget END -->
+      <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_44f68"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSD/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">BTCUSD Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": 980,
+  "height": 610,
+  "symbol": "BINANCE:BTCUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "studies": [
+    "hullMA@tv-basicstudies"
+  ],
+  "container_id": "tradingview_44f68"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
        `;
           myContainer.innerHTML += myHtml;
         }

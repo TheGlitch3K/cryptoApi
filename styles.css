@@ -1,10 +1,10 @@
-.avatar {
+.image {
   border-radius: 50%;
   height: 100px;
   float: top;
 }
 
-.astronaut {
+.cryptos {
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
